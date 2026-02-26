@@ -2,7 +2,9 @@ name: CI Pipeline
 
 on:
           push:
-                      branches: [ main, feature-hello ]
+                      branches:
+                                    - main
+                                            - feature-hello
 
                       jobs:
                                 build:
@@ -10,5 +12,5 @@ on:
                                                 steps:
                                                               - name: Checkout code
                                                                         uses: actions/checkout@v3
-                                                                              - name: Run a simple script
-                                                                                        run: echo "CI/CD pipeline triggered successfully!"
+                                                                              - name: Run test script
+                                                                                        run: echo "Pipeline triggered successfully!"
